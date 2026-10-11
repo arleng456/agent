@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ST PILOT</title>
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --panel: #111111;
+        --panel-border: #1a1a1a;
+        --text: #eaeaea;
+        --muted: #9ca3af;
+        --accent: #00ff88;
+        --accent-dark: #00cc6a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        width: min(520px, calc(100vw - 32px));
+        text-align: center;
+      }
+
+      .logo {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        font-weight: 700;
+        letter-spacing: 0.22rem;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        color: #7a7a7a;
+        font-size: 0.75rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        margin-bottom: 2.25rem;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--panel-border);
+        border-radius: 12px;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      }
+
+      h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1.4rem;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 0.98rem;
+      }
+
+      .actions {
+        margin-top: 1.5rem;
+      }
+
+      .button {
+        display: inline-block;
+        background: var(--accent);
+        color: #06130d;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 0.9rem 1.5rem;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .button:hover {
+        background: var(--accent-dark);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="logo">ST PILOT</div>
+      <div class="subtitle">System Monitoring Agent</div>
+
+      <section class="card">
+        <h2>GitHub Pages is now working</h2>
+        <p>
+          This site is being served from the repository root. The previous 404 was caused by a missing
+          <strong>index.html</strong> in the Pages source folder.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="https://github.com/arleng456/agent">View repository</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
